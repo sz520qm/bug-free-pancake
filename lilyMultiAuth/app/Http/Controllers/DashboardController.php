@@ -23,6 +23,11 @@ class DashboardController extends Controller
     {
      return view('myprofile');
     }
+
+    public function adminprofile()
+    {
+     return view('adminprofile');
+    }
  
     public function postcreate()
     {
