@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -36,5 +37,15 @@ Route::group(['middleware' => ['auth', 'role:user']], function() {
 Route::group(['middleware' => ['auth', 'role:blogwriter']], function() { 
     Route::get('/dashboard/postcreate', 'App\Http\Controllers\DashboardController@postcreate')->name('dashboard.postcreate');
 });
+
+Route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/reviews/create', [ReviewController::class, 'create']);
+Route::get('/reviews/rs-create', [ReviewController::class, 'createRs']);
+
+Route::get('/reviews/{id}', [ReviewController::class, 'show']);
+
+
+Route::post('/reviews', [ReviewController::class, 'store']);
+Route::delete('/reviews/{id}', [ReviewController::class, 'destroy']);
 
 require __DIR__.'/auth.php';

@@ -18,9 +18,9 @@
                         <form action="/reviews" method="POST">
                       
                           @csrf
-                          <input type="hidden" value="{{Auth::user()->name}}" name="user_name">
+                          <input style="display: none" type="text" value="{{Auth::user()->name}}" name="name">
 
-                        <input type="hidden" value="{{Auth::user()->room}}" name="user_room">
+                        <input style="display: none"  type="text" value="{{Auth::user()->room}}" name="room">
                      
                           <div>
                                {{-- <img src="{{ asset('img/bedroom.png') }}"  style="max-height: 50px">   --}}
