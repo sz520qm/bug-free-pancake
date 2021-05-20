@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard for New Blog post') }}
+            {{ __('Submit a Review') }}
         </h2>
     </x-slot>
 
@@ -12,20 +12,16 @@
                    
                     <div class="wrapper review-details create-review">
 
-                        <h1>Submit a Review</h1> 
+                       
                       
                       
                         <form action="/reviews" method="POST">
                       
                           @csrf
-                          <label for="name">Name</label>    
-                          <input type="text" id="name" name="name">
-                          <br>
-                      
-                          <div><label for="room">Room</label>  
-                              <input type="integer" id="room" name="room"></div> 
-                             
-                          </select>   
+                          <input type="hidden" value="{{Auth::user()->name}}" name="user_name">
+
+                        <input type="hidden" value="{{Auth::user()->room}}" name="user_room">
+                     
                           <div>
                                {{-- <img src="{{ asset('img/bedroom.png') }}"  style="max-height: 50px">   --}}
                               <label for="bedroom">Bedroom</label>

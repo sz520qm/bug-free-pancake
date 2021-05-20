@@ -134,7 +134,7 @@
                 @if (Auth::user()->hasRole('blogwriter'))
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard.postcreate')" :active="request()->routeIs('dashboard.postcreate')">
-                        {{ __('Create a new Blog Post') }}
+                        {{ __('Submit a Review') }}
                     </x-nav-link>
                 </div>
                 @endif
