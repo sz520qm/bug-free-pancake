@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth', 'role:blogwriter']], function() {
 });
 
 Route::get('/reviews', [ReviewController::class, 'index']);
-Route::get('/reviews/create', [ReviewController::class, 'create']);
+
 Route::get('/reviews/rs-create', [ReviewController::class, 'createRs']);
 
 Route::get('/reviews/{id}', [ReviewController::class, 'show']);

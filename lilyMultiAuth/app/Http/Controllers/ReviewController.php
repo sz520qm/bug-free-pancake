@@ -58,7 +58,7 @@ class ReviewController extends Controller
         $review->save();
 
         
-        return redirect('/dashboard')->with('mssg', 'Thanks for your review! - !');
+        return redirect('/dashboard')->with('mssg', 'Thanks for your review! - Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾ Ð·Ð° Ð¾Ñ‚Ð·Ñ‹Ð²!');
     }
 
     public function destroy($id) 
