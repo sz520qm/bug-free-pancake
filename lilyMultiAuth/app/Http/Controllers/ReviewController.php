@@ -4,31 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
     public function index() 
     {
-        //   $reviews = Review::all() ;
         $reviews = Review::orderBy('room')->get() ;
-
-        // $reviews = Review::latest()->get() ;
-     
-    
-        return view('reviews.index', [
+        if (Auth::user()->hasRole('user')) {
+            return view('userdash');
+        } elseif (Auth::user()->hasRole('blogwriter')) {
+            return view('blogwriterdash');
+        } elseif (Auth::user()->hasRole('admin')) {
+            return view('reviews.index', [
             'reviews' => $reviews,
        
 
-            'name' => request('name'),
-            'age' => request('age')
         ]);
+        }
     }
 
     public function show($id) 
     {
         $review = Review::findOrfail($id);
-        return view('reviews.show', ['review' =>$review]);
     }
+        
 
     public function createRs() 
     {
