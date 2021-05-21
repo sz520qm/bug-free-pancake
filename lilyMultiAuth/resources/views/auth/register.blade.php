@@ -40,6 +40,11 @@
                     <option value="8">Room 8</option>
                     <option value="9">Room 9</option>
                     <option value="10">Room 10</option>
+                    <option value="11">Room 11</option>
+                    <option value="12">Room 12</option>
+                    <option value="13">Room 13</option>
+                    <option value="14">Room 14</option>
+                    <option value="15">Room 15</option>
                 </select>
             </div>
 
