@@ -32143,6 +32143,7 @@ select {
 
 .duties {
   clear: left;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 640px) {

@@ -24,7 +24,7 @@
 
                     <div>
                         <fieldset class="rating1">
-                            <legend>Bedroom</legend>
+                            <legend class="text-2xl">Bedroom</legend>
                             <input type="radio" id="1star5" name="bedroom" value="5" /><label for="1star5" title="Rocks!">5</label>
                             <input type="radio" id="1star4" name="bedroom" value="4" /><label for="1star4" title="Pretty good">4</label>
                             <input type="radio" id="1star3" name="bedroom" value="3" /><label for="1star3" title="Meh">3</label>
@@ -35,7 +35,7 @@
 <div class="duties"></div>
                     <div>
                         <fieldset class="rating1">
-                            <legend>Bathroom</legend>
+                            <legend class="text-2xl">Bathroom</legend>
                             <input type="radio" id="2star5" name="bathroom" value="5" /><label for="2star5" title="Rocks!"></label>
                             <input type="radio" id="2star4" name="bathroom" value="4" /><label for="2star4" title="Pretty good"></label>
                             <input type="radio" id="2star3" name="bathroom" value="3" /><label for="2star3" title="Meh"></label>
@@ -46,7 +46,7 @@
                     <div class="duties"></div>
                     <div>
                         <fieldset class="rating1">
-                            <legend>Living Room</legend>
+                            <legend class="text-2xl">Living Room</legend>
                             <input type="radio" id="3star5" name="livingroom" value="5" /><label for="3star5" title="Rocks!"></label>
                             <input type="radio" id="3star4" name="livingroom" value="4" /><label for="3star4" title="Pretty good"></label>
                             <input type="radio" id="3star3" name="livingroom" value="3" /><label for="3star3" title="Meh"></label>
@@ -57,7 +57,7 @@
                     <div class="duties"></div>
                     <div >
                         <fieldset class="rating1">
-                            <legend>Kitchen</legend>
+                            <legend class="text-2xl">Kitchen</legend>
                             <input type="radio" id="4star5" name="kitchen" value="5" /><label for="4star5" title="Rocks!"></label>
                             <input type="radio" id="4star4" name="kitchen" value="4" /><label for="4star4" title="Pretty good"></label>
                             <input type="radio" id="4star3" name="kitchen" value="3" /><label for="4star3" title="Meh"></label>
@@ -66,19 +66,23 @@
                         </fieldset>
                     </div>
 
+                     <div class="duties"></div>
+
                           <div> 
+                              
+                            <strong><h2 style="font-size: 30px" class="duties">Duties Omitted</h2></strong>
                           <fieldset class="duties">
-                              <label> <h4>Duties Omitted</h4> </label>
-                              <input type="checkbox" name="flunks[]" value=" bedroom floor dirty">Bedroom floor not cleaned <br />
-                              <input type="checkbox" name="flunks[]" value=" bathroom floor dirty">Bathroom floor not cleaned<br />
-                              <input type="checkbox" name="flunks[]" value=" livingroom floor dirty">Living room floor not cleaned <br />
-                              <input type="checkbox" name="flunks[]" value=" kitchen floor dirty">Kitchen floor not cleaned<br />
-                              <input type="checkbox" name="flunks[]" value="bed not made">Bed not correctly made<br />
-                              <input type="checkbox" name="flunks[]" value="sheets dirty">Sheets not clean<br />
-                              <input type="checkbox" name="flunks[]" value="dishes not packed">Dishes not packed away<br />
-                              <input type="checkbox" name="flunks[]" value="toilet dirty">Toilet not cleaned<br />
-                              <input type="checkbox" name="flunks[]" value="basin dirty">Basin not cleaned<br />
-                              <input type="checkbox" name="flunks[]" value="shower dirty">Shower not cleaned<br />
+                          
+                              <input type="checkbox" name="flunks[]" value=" bedroom floor dirty"> Bedroom floor not cleaned <br />
+                              <input type="checkbox" name="flunks[]" value=" bathroom floor dirty"> Bathroom floor not cleaned<br />
+                              <input type="checkbox" name="flunks[]" value=" livingroom floor dirty"> Living room floor not cleaned <br />
+                              <input type="checkbox" name="flunks[]" value=" kitchen floor dirty"> Kitchen floor not cleaned<br />
+                              <input type="checkbox" name="flunks[]" value="bed not made"> Bed not correctly made<br />
+                              <input type="checkbox" name="flunks[]" value="sheets dirty"> Sheets not clean<br />
+                              <input type="checkbox" name="flunks[]" value="dishes not packed"> Dishes not packed away<br />
+                              <input type="checkbox" name="flunks[]" value="toilet dirty"> Toilet not cleaned<br />
+                              <input type="checkbox" name="flunks[]" value="basin dirty"> Basin not cleaned<br />
+                              <input type="checkbox" name="flunks[]" value="shower dirty"> Shower not cleaned<br />
                               <input type="checkbox" name="flunks[]" value="door unlocked"> Door not locked <br />
                               <input type="checkbox" name="flunks[]" value="alarm not set"> Alarm not set <br />           
                   
