@@ -11,22 +11,20 @@ class ReviewController extends Controller
     public function index() 
     {
         $reviews = Review::orderBy('room')->get() ;
-        if (Auth::user()->hasRole('user')) {
-            return view('userdash');
-        } elseif (Auth::user()->hasRole('blogwriter')) {
-            return view('blogwriterdash');
-        } elseif (Auth::user()->hasRole('admin')) {
+    
+        if (Auth::user()->hasRole('admin')) {
             return view('reviews.index', [
             'reviews' => $reviews,
-       
-
-        ]);
+               ]);
         }
     }
 
     public function show($id) 
     {
         $review = Review::findOrfail($id);
+        if (Auth::user()->hasRole('admin')) {
+            return view('reviews.show', ['review' =>$review]);
+        }
     }
         
 
