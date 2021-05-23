@@ -45,9 +45,9 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="index3.html" class="nav-link">Home</a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
+        {{-- <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
-        </li>
+        </li> --}}
         </ul>
 
         <!-- Right navbar links -->
@@ -178,7 +178,7 @@
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
         <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">Lilyshire Reviews</span>
         </a>
 
         <!-- Sidebar -->
@@ -186,10 +186,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-            <a href="#" class="d-block">{{Ath}}</a>
+            <a href="#" class="d-block">{{Auth::user()->name}}</a>
             </div>
         </div>
 
@@ -210,7 +210,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
-            <li class="nav-item menu-open">
+            {{-- <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
@@ -238,7 +238,7 @@
                     </a>
                 </li>
                 </ul>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <a href="pages/widgets.html" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
@@ -877,9 +877,9 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                 <div class="inner">
-                    <h3>150</h3>
+                    <h3>{{$reviews = DB::table('reviews')->count()}}</h3>
 
-                    <p>New Orders</p>
+                    <p>All Reviews</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-bag"></i>
@@ -892,7 +892,7 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <h3>{{$reviews = DB::table('reviews')->count()}}<sup style="font-size: 20px">%</sup></h3>
 
                     <p>Bounce Rate</p>
                 </div>
@@ -907,9 +907,9 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                 <div class="inner">
-                    <h3>44</h3>
+                    <h3>{{$users = DB::table('users')->count()}}</h3>
 
-                    <p>User Registrations</p>
+                    <p>Guest Registrations</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
@@ -1310,7 +1310,7 @@
             <section class="col-lg-5 connectedSortable">
 
                 <!-- Map card -->
-                <div class="card bg-gradient-primary">
+                <div style="display: none"  class="card bg-gradient-primary">
                 <div class="card-header border-0">
                     <h3 class="card-title">
                     <i class="fas fa-map-marker-alt mr-1"></i>

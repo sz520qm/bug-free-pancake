@@ -1,20 +1,20 @@
 
-<x-app-layout>
+{{-- <x-app-layout>
 
-    <x-slot name="header">
+    <x-slot name="header"> --}}
 
-    <div class="wrapper review-index">     
+    <div class="">     
 
         @foreach ($reviews as $review)
-            <div class="review-item">
+            <div class="">
                 
       <h2><a style="text-decoration: none" href="/reviews/{{ $review->id }}">{{ $review->name }} in Room {{ $review->room }}</a></h2> 
       
-      <div><h3>Ratings</h3></div>
-          <p><b>Bedroom</b>  - {{ $review->bedroom }} star</p>
-          <p>  <b> Bathroom</b> - {{ $review->bathroom }} star</p>
-          <p><b> Living room</b> - {{ $review->livingroom }} star</p>  
-          <p> <b>Kitchen</b> - {{ $review->kitchen }} star </p> 
+      <div><h3>Rating done on {{ $review->created_at }}</h3></div>
+          <p><b>Bedroom </b>  - <img src="dist/img/{{ $review->bedroom }}.png" width=80 alt=""> {{ $review->bedroom }} </p> 
+          <p>  <b> Bathroom</b> -<img src="dist/img/{{ $review->bathroom }}.png" width=80 alt=""> {{ $review->bathroom }} </p>
+          <p><b> Living room</b> -<img src="dist/img/{{ $review->livingroom }}.png" width=80 alt=""> {{ $review->livingroom }} </p>  
+          <p> <b>Kitchen</b> -<img src="dist/img/{{ $review->kitchen }}.png" width=80 alt=""> {{ $review->kitchen }}  </p> 
 
             <p> <b>Flunks:</b> </p>
 
@@ -38,4 +38,4 @@
     </div>
    
 
-</x-app-layout>
+{{-- </x-app-layout> --}}

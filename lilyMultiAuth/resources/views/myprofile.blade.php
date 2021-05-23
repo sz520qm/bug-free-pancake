@@ -32,7 +32,7 @@
                             <input type="radio" id="1star1" name="bedroom" value="1" /><label for="1star1" title="Sucks big time">1</label>
                         </fieldset>
                     </div>
-<div class="duties"></div>
+                <div class="duties"></div>
                     <div>
                         <fieldset class="rating1">
                             <legend class="text-2xl">Bathroom</legend>
