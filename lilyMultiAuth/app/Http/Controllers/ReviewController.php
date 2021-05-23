@@ -64,6 +64,6 @@ class ReviewController extends Controller
         $review = Review::findOrFail($id);
         $review->delete();
 
-        return redirect('/dashboard');
+        return redirect('/reviews');
     }
 }

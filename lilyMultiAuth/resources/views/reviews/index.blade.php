@@ -33,9 +33,9 @@
             @endif              
 
             </div>
-        @endforeach   
+        @endforeach  
         </div>
     </div>
-    <div><a href="/dashboard" class="back">home</a></div>
+   
 
 </x-app-layout>
