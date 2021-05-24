@@ -43,7 +43,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Home</a>
+            <a href="/dashboard" class="nav-link">Home</a>
         </li>
         {{-- <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
@@ -159,7 +159,7 @@
             <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
             </a>
@@ -168,7 +168,7 @@
             <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
             <i class="fas fa-th-large"></i>
             </a>
-        </li>
+        </li> --}}
         </ul>
     </nav>
     <!-- /.navbar -->
@@ -191,6 +191,8 @@
             <div class="info">
             <a href="#" class="d-block">{{Auth::user()->name}}</a>
             </div>
+           
+           
         </div>
 
         <!-- SidebarSearch Form -->
@@ -239,20 +241,12 @@
                 </li>
                 </ul>
             </li> --}}
+            
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
-                <p>
-                    Widgets
-                    <span class="right badge badge-danger">New</span>
-                </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/reviews" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
-                    Layout Options
+                   Reviews
                     <i class="fas fa-angle-left right"></i>
                     <span class="badge badge-info right">6</span>
                 </p>
@@ -261,13 +255,13 @@
                 <li class="nav-item">
                     <a href="pages/layout/top-nav.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Top Navigation</p>
+                    <p>See All Reviews</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Top Navigation + Sidebar</p>
+                    <p>Latest Reviews</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -276,78 +270,14 @@
                     <p>Boxed</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Sidebar</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Sidebar <small>+ Custom Area</small></p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Navbar</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-footer.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Footer</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Collapsed Sidebar</p>
-                    </a>
-                </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-chart-pie"></i>
-                <p>
-                    Charts
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="pages/charts/chartjs.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>ChartJS</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/charts/flot.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Flot</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/charts/inline.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Inline</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/charts/uplot.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>uPlot</p>
-                    </a>
-                </li>
+                
                 </ul>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-tree"></i>
                 <p>
-                    UI Elements
+                    Guests
                     <i class="fas fa-angle-left right"></i>
                 </p>
                 </a>
@@ -355,13 +285,13 @@
                 <li class="nav-item">
                     <a href="pages/UI/general.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>General</p>
+                    <p>Add a Guest</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/UI/icons.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Icons</p>
+                    <p>See All Guests</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -370,43 +300,14 @@
                     <p>Buttons</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="pages/UI/sliders.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Sliders</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/modals.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Modals & Alerts</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/navbar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Navbar & Tabs</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/timeline.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Timeline</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/ribbons.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Ribbons</p>
-                    </a>
-                </li>
+               
                 </ul>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
-                    Forms
+                    Maintenance
                     <i class="fas fa-angle-left right"></i>
                 </p>
                 </a>
@@ -414,59 +315,104 @@
                 <li class="nav-item">
                     <a href="pages/forms/general.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>General Elements</p>
+                    <p>Gas</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/forms/advanced.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Advanced Elements</p>
+                    <p>Repairs</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/forms/editors.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Editors</p>
+                    <p>Garden and Grounds</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/forms/validation.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Validation</p>
+                    <p>Garbage</p>
                     </a>
                 </li>
                 </ul>
             </li>
+
             <li class="nav-item">
                 <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
+                <i class="nav-icon fas fa-edit"></i>
                 <p>
-                    Tables
+                    Security
                     <i class="fas fa-angle-left right"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="pages/tables/simple.html" class="nav-link">
+                    <a href="pages/forms/general.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Simple Tables</p>
+                    <p>Cameras</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/tables/data.html" class="nav-link">
+                    <a href="pages/forms/advanced.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>DataTables</p>
+                    <p>Alarms</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                    <a href="pages/forms/editors.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>jsGrid</p>
+                    <p>Front Gate</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="pages/forms/validation.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Internet</p>
+                    </a>
+                </li>
+                           
                 </ul>
             </li>
-            <li class="nav-header">EXAMPLES</li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                    Housekeeping
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="pages/forms/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Detergents</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/forms/advanced.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Supplies</p>
+                    </a>
+                </li>
+               
+                           
+                </ul>
+            </li>
+
+            <li class="nav-item">                
+                <form class="nav-link" method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="nav-link" href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">                                         
+                        <i class="nav-icon fas fa-th"></i>
+                        {{ __('Logout') }}
+                    </a>                
+                </form>
+            </li>
+            {{-- <li class="nav-header">EXAMPLES</li>
             <li class="nav-item">
                 <a href="pages/calendar.html" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
@@ -844,13 +790,15 @@
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
-        </div>
+        </div> --}}
         <!-- /.sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+
+        @yield('content')
+        {{-- <!-- Content Header (Page header) -->
         <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -1465,7 +1413,7 @@
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
     </aside>
-    <!-- /.control-sidebar -->
+    <!-- /.control-sidebar --> --}}
     </div>
     <!-- ./wrapper -->
 
@@ -1506,21 +1454,4 @@
 </body>
 </html>
 
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard admin') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in admin!<div><a href="/reviews" > See all guest reviews</a></div>
-                </div>
-            </div>
-        </div>
-    </div>  
-    
-</x-app-layout>
