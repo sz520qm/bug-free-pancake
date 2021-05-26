@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function() {
 
 // for users
 Route::group(['middleware' => ['auth', 'role:user']], function() { 
-    Route::get('/dashboard/myprofile', 'App\Http\Controllers\DashboardController@myprofile')->name('dashboard.myprofile');
+    Route::get('/myprofile', 'App\Http\Controllers\DashboardController@myprofile')->name('myprofile');
 });
 
 // for blogwriters
