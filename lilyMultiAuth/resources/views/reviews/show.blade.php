@@ -1,9 +1,8 @@
-@extends('layouts.admindash-layout')
+<x-app-layout>
 
+    <x-slot name="header"> 
 
-@section('content') 
-
-<div class="">
+<div class="wrapper review-details">
 
 <h1>{{ $review->name }} in Room {{ $review->room }}</h1>
 
@@ -32,5 +31,4 @@
 
 <div><a href="/reviews" class="back"> <- Back to Reviews</a></div>
 </div>
-   
-@endsection
+</x-app-layout>

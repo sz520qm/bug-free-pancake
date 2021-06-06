@@ -47,12 +47,12 @@
                 <div class="inner">
                     <h3>{{$reviews = DB::table('reviews')->count()}}<sup style="font-size: 20px">%</sup></h3>
 
-                    <p>Add a Guest</p>
+                    <p>Bounce Rate</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="/register" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -62,7 +62,7 @@
                 <div class="inner">
                     <h3>{{$users = DB::table('users')->count()}}</h3>
 
-                    <p>Guests Registered</p>
+                    <p>Guest Registrations</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
