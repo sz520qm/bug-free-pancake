@@ -1,14 +1,16 @@
+@extends('layouts.admindash-layout')
 
-{{-- <x-app-layout>
 
-    <x-slot name="header"> --}}
+@section('content') 
+    <div class="p-5">     
+        
+    
 
-    <div class="">     
-
-        @foreach ($reviews as $review)
+        @foreach ($reviews as $review),
+        
             <div class="">
                 
-      <h2><a style="text-decoration: none" href="/reviews/{{ $review->id }}">{{ $review->name }} in Room {{ $review->room }}</a></h2> 
+      <h2><a style="text-decoration: none" href="">{{ $review->name }} in Room {{ $review->room }}</a></h2> 
       
       <div><h3>Rating done on {{ $review->created_at }}</h3></div>
           <p><b>Bedroom </b>  - <img src="dist/img/{{ $review->bedroom }}.png" width=80 alt=""> {{ $review->bedroom }} </p> 
@@ -37,5 +39,5 @@
         </div>
     </div>
    
+    @endsection
 
-{{-- </x-app-layout> --}}

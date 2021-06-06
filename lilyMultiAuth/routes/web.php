@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,21 +25,25 @@ Route::get('/', function () {
 // })->middleware(['auth'])->name('dashboard');
 
 //auth route for both 
-Route::group(['middleware' => ['auth']], function() { 
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
 });
 
 // for users
-Route::group(['middleware' => ['auth', 'role:user']], function() { 
+Route::group(['middleware' => ['auth', 'role:user']], function () {
     Route::get('/myprofile', 'App\Http\Controllers\DashboardController@myprofile')->name('myprofile');
 });
 
 // for blogwriters
-Route::group(['middleware' => ['auth', 'role:blogwriter']], function() { 
+Route::group(['middleware' => ['auth', 'role:blogwriter']], function () {
     Route::get('/dashboard/postcreate', 'App\Http\Controllers\DashboardController@postcreate')->name('dashboard.postcreate');
 });
+Route::get('/register', [RegisteredUserController::class, 'create']);
 
 Route::get('/reviews', [ReviewController::class, 'index']);
+
+Route::get('/guests', [GuestController::class, 'guestData']);
+Route::get('/add-guest', [GuestController::class, 'create']);
 
 Route::get('/reviews/rs-create', [ReviewController::class, 'createRs']);
 
@@ -48,4 +53,4 @@ Route::get('/reviews/{id}', [ReviewController::class, 'show']);
 Route::post('/reviews', [ReviewController::class, 'store']);
 Route::delete('/reviews/{id}', [ReviewController::class, 'destroy']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

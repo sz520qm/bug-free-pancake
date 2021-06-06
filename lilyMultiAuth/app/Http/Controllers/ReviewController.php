@@ -2,45 +2,48 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
-    public function index() 
+    public function index()
     {
-        $reviews = Review::orderBy('room')->get() ;
-    
+        $reviews = Review::orderBy('room')->get();
+
         if (Auth::user()->hasRole('admin')) {
             return view('reviews.index', [
-            'reviews' => $reviews,
-               ]);
+                'reviews' => $reviews,
+            ]);
         }
     }
 
-    public function show($id) 
+    public function show($id)
     {
         $review = Review::findOrfail($id);
         if (Auth::user()->hasRole('admin')) {
-            return view('reviews.show', ['review' =>$review]);
+            return view('reviews.show', ['review' => $review]);
         }
     }
-        
 
-    public function createRs() 
+
+    public function createRs()
     {
         return view('reviews.rs-create');
     }
 
-    public function create() 
+    public function create()
     {
         return view('dashboard.postcreate');
     }
-    
-    public function store() 
-    
-    
+
+
+
+    public function store()
+
+
     {
 
         $review = new Review();
@@ -51,15 +54,15 @@ class ReviewController extends Controller
         $review->livingroom = request('livingroom');
         $review->kitchen =  request('kitchen');
         $review->flunks = request('flunks');
- 
+
 
         $review->save();
 
-        
+
         return redirect('/dashboard')->with('mssg', 'Thanks for your review! - Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾ Ð·Ð° Ð¾Ñ‚Ð·Ñ‹Ð²!');
     }
 
-    public function destroy($id) 
+    public function destroy($id)
     {
         $review = Review::findOrFail($id);
         $review->delete();
